@@ -1,0 +1,47 @@
+name: "Greetings & First‑Time Contributor Welcome"
+
+on:
+  pull_request_target:
+  issues:
+
+jobs:
+  greet-first-time-contributor:
+    name: "Send Welcome Message"
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: "Run First Interaction Bot"
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          issue-message: |
+            👋 **Welcome to the project, and thank you for opening your first issue!**
+
+            We appreciate you taking the time to contribute.  
+            Our team will review your report shortly.
+
+            In the meantime:
+            - Ensure you’ve provided clear reproduction steps  
+            - Include logs, screenshots, or environment details if applicable  
+            - Check existing issues to avoid duplicates  
+
+            Thanks again for helping improve this project.
+
+          pr-message: |
+            🚀 **Thank you for submitting your first pull request!**
+
+            Your contribution is greatly appreciated.  
+            A maintainer will review your PR as soon as possible.
+
+            To help speed up the process:
+            - Confirm your PR follows the project’s coding standards  
+            - Ensure all checks and tests pass  
+            - Provide a clear summary of changes and motivation  
+            - Link any related issues  
+
+            We’re excited to have you contributing — welcome aboard!
