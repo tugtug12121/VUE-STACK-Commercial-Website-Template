@@ -14,7 +14,7 @@ jobs:
       issues: write        # Needed to post comments
       contents: read       # Allows reading repo content
       models: read         # Required for AI inference
-
+      
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@v4

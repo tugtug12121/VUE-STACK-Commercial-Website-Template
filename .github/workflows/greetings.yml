@@ -20,28 +20,66 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
           issue-message: |
-            👋 **Welcome to the project, and thank you for opening your first issue!**
+            👋 **Hello @${{ github.actor }} — welcome to the project!**
 
-            We appreciate you taking the time to contribute.  
-            Our team will review your report shortly.
+            Thank you for opening your **first issue**.  
+            We appreciate you taking the time to contribute and help improve this platform.
 
-            In the meantime:
-            - Ensure you’ve provided clear reproduction steps  
-            - Include logs, screenshots, or environment details if applicable  
-            - Check existing issues to avoid duplicates  
+            ## 🧭 Before You Continue
+            To help us review your issue efficiently, please ensure:
+            - Clear reproduction steps are included  
+            - Logs, screenshots, or environment details are attached  
+            - You’ve checked existing issues to avoid duplicates  
+            - You’ve described expected vs. actual behaviour  
 
-            Thanks again for helping improve this project.
+            ## 📘 Useful Resources
+            - **Contributing Guide:** `/CONTRIBUTING.md`  
+            - **Code of Conduct:** `/CODE_OF_CONDUCT.md`  
+            - **Issue Templates:** `.github/ISSUE_TEMPLATE/`  
+            - **Documentation:** `/docs` (if available)
+
+            ## ❓ Frequently Asked Questions
+            **Q: How long until someone responds?**  
+            A maintainer typically reviews new issues within 24–48 hours.
+
+            **Q: What information helps the most?**  
+            Screenshots, logs, environment details, and clear steps to reproduce.
+
+            **Q: Can I submit a feature request instead?**  
+            Absolutely — use the Feature Request template.
+
+            ## 🙌 Thanks Again
+            We’re grateful for your contribution and look forward to collaborating with you.
 
           pr-message: |
-            🚀 **Thank you for submitting your first pull request!**
+            🚀 **Welcome @${{ github.actor }} — and thank you for your first pull request!**
 
-            Your contribution is greatly appreciated.  
-            A maintainer will review your PR as soon as possible.
+            We appreciate your effort in contributing to this project.  
+            A maintainer will review your PR shortly.
 
-            To help speed up the process:
-            - Confirm your PR follows the project’s coding standards  
-            - Ensure all checks and tests pass  
-            - Provide a clear summary of changes and motivation  
-            - Link any related issues  
+            ## 🧭 Pre‑Review Checklist
+            To help speed up the review process, please ensure:
+            - All tests pass successfully  
+            - Code follows project style and linting rules  
+            - A clear summary of changes is included  
+            - Any related issues are linked  
+            - Breaking changes are documented  
 
-            We’re excited to have you contributing — welcome aboard!
+            ## 📘 Helpful Resources
+            - **Contribution Guidelines:** `/CONTRIBUTING.md`  
+            - **Coding Standards:** `/docs/coding-standards.md`  
+            - **Pull Request Template:** `.github/PULL_REQUEST_TEMPLATE.md`  
+
+            ## ❓ Frequently Asked Questions
+            **Q: When will my PR be reviewed?**  
+            Most PRs are reviewed within 24–72 hours depending on complexity.
+
+            **Q: What if changes are requested?**  
+            Simply push new commits — the PR will update automatically.
+
+            **Q: Can I open multiple PRs?**  
+            Yes! Just keep each PR focused on a single change or feature.
+
+            ## 🙌 Thank You
+            Your contribution helps make this project better for everyone.  
+            We’re excited to have you on board — welcome to the community!
