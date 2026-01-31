@@ -1,0 +1,42 @@
+name: "AI Issue Summarizer"
+
+# Trigger only when a new issue is opened
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  summarize-issue:
+    name: "Generate AI Summary for New Issue"
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write        # Needed to post comments
+      contents: read       # Allows reading repo content
+      models: read         # Required for AI inference
+
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+
+      - name: "Run AI Inference — Summarize Issue"
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          prompt: |
+            You are assisting maintainers by summarizing newly opened GitHub issues.
+            Provide a clear, concise, professional one-paragraph summary.
+            Avoid speculation and do not add recommendations unless explicitly stated.
+
+            --- ISSUE DETAILS ---
+            Title: ${{ github.event.issue.title }}
+            Body: ${{ github.event.issue.body }}
+            ----------------------
+
+      - name: "Post Summary as Comment"
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "$SUMMARY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          SUMMARY: ${{ steps.inference.outputs.response }}
