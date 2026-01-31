@@ -1,0 +1,284 @@
+/* ============================================================
+   BMW M STRIPE — ADVANCED FUTURISTIC EDITION
+   Clean, sharp, motorsport identity bar
+============================================================ */
+.m-stripe {
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(
+    90deg,
+    #0033a0 0%,
+    #0033a0 33%,
+    #cc0000 33%,
+    #cc0000 66%,
+    #66ccff 66%,
+    #66ccff 100%
+  );
+  border-radius: 6px;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transform: translateZ(0);
+}
+
+/* ============================================================
+   HERO SECTION — FUTURISTIC LAYOUT
+============================================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 1rem;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #0A0A0A;
+  letter-spacing: -0.7px;
+  margin-bottom: 1.4rem;
+}
+
+.hero-subtitle {
+  font-size: 1.28rem;
+  color: #4b5563;
+  margin-bottom: 2.6rem;
+  line-height: 1.75;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.4rem;
+}
+
+/* Futuristic BMW gradient block */
+.hero-graphic {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(155deg, #1C69D4, #0F3B82, #001A3E);
+  border-radius: 32px;
+  box-shadow: 0 14px 60px rgba(28, 105, 212, 0.5);
+  animation: float 4.8s ease-in-out infinite;
+  backdrop-filter: blur(6px);
+  transform: translateZ(0);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+  100% { transform: translateY(0); }
+}
+
+/* ============================================================
+   BMW BUTTON SYSTEM — ADVANCED EDITION
+============================================================ */
+.btn-bmw {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  transform: translateZ(0);
+}
+
+/* Primary — deep metallic BMW blue */
+.btn-bmw.primary {
+  background: linear-gradient(135deg, #1C69D4, #0F3B82);
+  color: white;
+  box-shadow: 0 8px 20px rgba(28, 105, 212, 0.5);
+}
+
+.btn-bmw.primary:hover {
+  background: linear-gradient(135deg, #1C69D4, #154A9A);
+  transform: translateY(-4px);
+}
+
+/* Outline — formal, futuristic */
+.btn-bmw.outline {
+  background: transparent;
+  border: 2px solid #1C69D4;
+  color: #1C69D4;
+}
+
+.btn-bmw.outline:hover {
+  background: rgba(28, 105, 212, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Large variant */
+.btn-bmw.large {
+  padding: 1.3rem 3rem;
+  font-size: 1.2rem;
+}
+
+/* Ripple effect */
+.btn-bmw::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn-bmw:active::after {
+  width: 260%;
+  height: 260%;
+}
+
+/* ============================================================
+   FEATURES SECTION — METALLIC FUTURE EDITION
+============================================================ */
+.features {
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 2.4rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card-bmw,
+.card {
+  background: #ffffff;
+  padding: 2.4rem;
+  border-radius: 18px;
+  border: 1px solid #d7d9dd;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card-bmw:hover,
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.16);
+  border-color: #1C69D4;
+}
+
+/* ============================================================
+   CATEGORY BUTTON-CARDS — FUTURISTIC TILES
+============================================================ */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.category-btn,
+.category-card {
+  background: #ffffff;
+  padding: 2.2rem;
+  border-radius: 18px;
+  border: 1px solid #d7d9dd;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  letter-spacing: 0.35px;
+}
+
+.category-btn:hover,
+.category-card:hover {
+  transform: translateY(-8px);
+  border-color: #1C69D4;
+  background: linear-gradient(135deg, #ffffff, #f3f6fb);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+
+/* ============================================================
+   CTA SECTION — FORMAL FUTURE
+============================================================ */
+.cta {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: #eef0f3;
+  border-radius: 20px;
+  margin-top: 4rem;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.08);
+}
+
+.cta h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+  font-weight: 900;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  color: #4b5563;
+  font-size: 1.2rem;
+}
+
+/* ============================================================
+   ANIMATIONS — ADVANCED
+============================================================ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay-1 { animation-delay: 0.2s; }
+.fade-up.delay-2 { animation-delay: 0.4s; }
+.fade-up.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-graphic {
+    width: 280px;
+    height: 280px;
+  }
+}
